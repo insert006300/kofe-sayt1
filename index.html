@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GoldBrew Coffee — Specialty Coffee</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fff8f2;
+      --accent:#6b4f2a;
+      --accent-dark:#3e2b1a;
+      --muted:#7a6a63;
+      --card:#fff;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Poppins",system-ui,Segoe UI,Roboto;
+      background: linear-gradient(180deg,#fff8f2 0%, #fffaf6 100%);
+      color:var(--accent-dark);
+    }
+
+    header{
+      width:100%;
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+      padding:12px 6%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      z-index:20;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--accent-dark);
+    }
+    .logo .badge{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      background: linear-gradient(135deg,#e3b07e, #6b4f2a);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:18px;
+      box-shadow: 0 6px 18px rgba(107,79,42,0.18);
+    }
+    nav{display:flex; gap:18px; align-items:center;}
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    nav a:hover{background:var(--glass); color:var(--accent-dark)}
+
+    .hero{
+      display:flex;
+      gap:48px;
+      align-items:center;
+      padding:56px 6%;
+      max-width:1200px;
+      margin:20px auto;
+    }
+
+    .hero-left{flex:1;}
+    .kicker{display:inline-block;background:#fff3e6;color:var(--accent-dark);padding:6px 10px;border-radius:999px;font-weight:600;margin-bottom:18px;}
+    h1{
+      font-size:42px;
+      margin:0 0 12px;
+      line-height:1.05;
+      color:var(--accent-dark);
+    }
+    p.lead{color:var(--muted); margin:0 0 20px; font-size:16px}
+    .cta{display:flex; gap:12px; align-items:center; margin-top:12px;}
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:12px 18px;
+      border-radius:12px;
+      border:0;
+      cursor:pointer;
+      font-weight:700;
+      box-shadow: 0 10px 30px rgba(107,79,42,0.18);
+      transition:transform .18s ease;
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--accent-dark);
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:none;
+      font-weight:600;
+    }
+    .btn:hover{transform:translateY(-4px)}
+
+    .menu-section{
+      background:#fff;
+      padding:60px 6%;
+      text-align:center;
+    }
+    .menu-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:24px;
+      margin-top:30px;
+    }
+    .menu-item{
+      background:var(--card);
+      border-radius:18px;
+      box-shadow:0 8px 20px rgba(15,15,15,0.06);
+      overflow:hidden;
+      transition:transform .2s ease;
+    }
+    .menu-item:hover{transform:translateY(-6px);}
+    .menu-item img{
+      width:100%; height:160px; object-fit:cover;
+    }
+    .menu-item h3{
+      margin:12px 0 6px;
+    }
+    .menu-item p{
+      color:var(--muted);
+      margin:0 0 10px;
+      font-size:14px;
+    }
+    .price{
+      font-weight:700;
+      color:var(--accent-dark);
+      margin-bottom:14px;
+    }
+
+    footer{
+      padding:24px 6%;
+      color:var(--muted);
+      border-top:1px solid rgba(0,0,0,0.04);
+      display:flex; justify-content:space-between; gap:20px; align-items:center;
+      max-width:1200px; margin:0 auto 40px;
+    }
+
+    @media (max-width:900px){
+      .hero{flex-direction:column; padding:28px 6%}
+      .hero-right{order:-1}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">
+      <div class="badge">GB</div>
+      <div>
+        <div style="font-weight:700">GoldBrew</div>
+        <div style="font-size:12px;color:var(--muted);">Specialty Coffee</div>
+      </div>
+    </a>
+    <nav>
+      <a href="#menu">Menyu</a>
+      <a href="#about">Biz haqimizda</a>
+      <a href="#gallery">Galereya</a>
+      <a href="#contact">Aloqa</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <span class="kicker">2025 yangi kolleksiya</span>
+      <h1>Har bir qultumda lazzat – GoldBrew Coffee</h1>
+      <p class="lead">Tabiiy loviyalar, qo‘l bilan qovurilgan, va mehr bilan tayyorlangan haqiqiy qahva. Bizda sifatli ta’m va chiroyli muhit.</p>
+      <div class="cta">
+        <a href="#menu"><button class="btn">Menuni ko‘rish</button></a>
+        <button class="btn secondary">Buyurtma berish</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="Coffee cup" width="340" style="border-radius:28px;box-shadow:0 20px 40px rgba(0,0,0,0.1)">
+    </div>
+  </section>
+
+  <!-- 🧋 MENYU BO'LIMI -->
+  <section id="menu" class="menu-section">
+    <h2 style="font-size:32px;">☕ Bizning Menyu</h2>
+    <p style="color:var(--muted);max-width:600px;margin:10px auto;">Har bir qahva turi eng sifatli loviyalardan tayyorlanadi. Quyidagi tanlovlardan birini tanlang!</p>
+
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop" alt="Americano">
+        <h3>Americano</h3>
+        <p>Klassik qora qahva, tabiiy achchiq lazzat bilan.</p>
+        <div class="price">18 000 so‘m</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Starbucks Coffee">
+        <h3>Starbucks Coffee</h3>
+        <p>Starbucks uslubidagi maxsus aralashma, yumshoq ta’m.</p>
+        <div class="price">25 000 so‘m</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=800&auto=format&fit=crop" alt="Caffè Mocha">
+        <h3>Caffè Mocha</h3>
+        <p>Shokoladli, sutli va qaymoqli maxsus ichimlik.</p>
+        <div class="price">22 000 so‘m</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=800&auto=format&fit=crop" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Yengil ko‘pik bilan bezatilgan yumshoq qahva.</p>
+        <div class="price">20 000 so‘m</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop" alt="Latte">
+        <h3>Latte</h3>
+        <p>Sut va espresso uyg‘unligi — nozik lazzat.</p>
+        <div class="price">19 000 so‘m</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1527694224012-bea50f2c7d2c?q=80&w=800&auto=format&fit=crop" alt="Cold Brew">
+        <h3>Cold Brew</h3>
+        <p>Sovuq suv bilan damlangan, tetiklashtiruvchi qahva.</p>
+        <div class="price">23 000 so‘m</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2025 GoldBrew Coffee</div>
+    <div>Toshkent, +998 90 000 00 00 </div>
+  </footer>
+</body>
+</html>
